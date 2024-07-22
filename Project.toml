@@ -3,11 +3,33 @@ uuid = "d8c2afa5-f6a5-4ae1-9822-bb2ff2f8c685"
 authors = ["Yujie Yang"]
 version = "1.0.0-DEV"
 
+[deps]
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+EllipsisNotation = "da5c29d0-fa7d-589e-88eb-ea29b0a81949"
+Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
+Gurobi = "2e9cd046-0924-5485-92f1-d5272153d98b"
+JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
+LazySets = "b4f0291d-fe17-52bc-9479-3d1a343d9043"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
+MatrixEquations = "99c1a7ee-ab34-5fd5-8076-27c950a045f4"
+ModelVerification = "6d061d49-e389-4b69-b84f-d5b218a5bedb"
+NaiveNASflux = "85610aed-7d32-5e57-bb50-4c2e1c9e7997"
+ONNXNaiveNASflux = "2e935253-ba83-4645-9154-13ffeb13a688"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+ProgressBars = "49802e3a-d2f1-5c88-81d8-b72133a6f568"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
+TensorBoardLogger = "899adc3e-224a-11e9-021f-63837185c80f"
+Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
+
 [compat]
-julia = "1.6.7"
+julia = "1.9.3"
 
 [extras]
+SafeTestsets = "1bc83da4-3b8d-516f-aca4-4fe02f6d838f"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
-test = ["Test"]
+test = ["SafeTestsets", "Test"]
