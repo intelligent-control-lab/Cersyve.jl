@@ -1,10 +1,16 @@
 using Cersyve
 using Test
-using JLD2
 
 task = Unicycle
 hidden_sizes = [32, 32]
-data = JLD2.load(joinpath(@__DIR__, "../data/unicycle_data.jld2"))["data"]
+data = Dict(
+    "x_mean"  => zeros(Float32, task.x_dim),
+    "x_std"   =>  ones(Float32, task.x_dim),
+    "u_mean"  => zeros(Float32, task.u_dim),
+    "u_std"   =>  ones(Float32, task.u_dim),
+    "dx_mean" => zeros(Float32, task.x_dim),
+    "dx_std"  =>  ones(Float32, task.x_dim),
+)
 f_model = Cersyve.create_mlp(task.x_dim + task.u_dim, task.x_dim, hidden_sizes)
 f_pi_model = Cersyve.create_closed_loop_dynamics_model(
     f_model, task.pi_model, data, task.x_low, task.x_high, task.u_dim)
