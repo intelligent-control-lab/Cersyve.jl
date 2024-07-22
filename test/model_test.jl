@@ -3,7 +3,7 @@ using Test
 
 task = Unicycle
 hidden_sizes = [32, 32]
-data = Dict(
+data = Dict{String, Array{Float32}}(
     "x_mean"  => zeros(Float32, task.x_dim),
     "x_std"   =>  ones(Float32, task.x_dim),
     "u_mean"  => zeros(Float32, task.u_dim),
