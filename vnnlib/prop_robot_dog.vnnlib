@@ -1,0 +1,24 @@
+; Cersyve-9 property robot_dog
+
+(declare-const X_0 Real)
+(declare-const X_1 Real)
+(declare-const X_2 Real)
+(declare-const X_3 Real)
+(declare-const X_4 Real)
+
+(declare-const Y_0 Real)
+(declare-const Y_1 Real)
+
+(assert (<= X_0 2))
+(assert (>= X_0 0))
+(assert (<= X_1 2))
+(assert (>= X_1 -2))
+(assert (<= X_2 2))
+(assert (>= X_2 -2))
+(assert (<= X_3 2))
+(assert (>= X_3 -2))
+(assert (<= X_4 2))
+(assert (>= X_4 -2))
+
+(assert (<= Y_0 0))
+(assert (>= Y_1 0))
