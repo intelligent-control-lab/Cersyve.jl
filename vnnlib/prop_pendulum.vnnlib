@@ -6,9 +6,9 @@
 (declare-const Y_0 Real)
 (declare-const Y_1 Real)
 
-(assert (<= X_0 -4))
+(assert (<= X_0 0.7853981633974483))
 (assert (>= X_0 -0.7853981633974483))
-(assert (<= X_1 0.7853981633974483))
+(assert (<= X_1 4))
 (assert (>= X_1 -4))
 
 (assert (<= Y_0 0))

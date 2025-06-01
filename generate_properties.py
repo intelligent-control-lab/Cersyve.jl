@@ -1,3 +1,5 @@
+import random
+import sys
 from math import pi
 
 
@@ -51,14 +53,17 @@ def write_prop(task: str, f):
 
 
 def main():
+    random.seed(int(sys.argv[1]))
+    selected_tasks = random.sample(list(input_bound.keys()), 3)
+
     # generate vnnlib
-    for task in input_bound.keys():
+    for task in selected_tasks:
         with open(f'vnnlib/prop_{task}.vnnlib', 'w') as f:
             write_prop(task, f)
 
     # generate csv
     with open('instances.csv', 'w') as f:
-        for task in input_bound.keys():
+        for task in selected_tasks:
             for version in ['pretrain', 'finetune']:
                 for cond in ['con', 'inv']:
                     onnx = f'onnx/{task}_{version}_{cond}.onnx'
