@@ -1,4 +1,3 @@
-import os
 from math import pi
 
 
@@ -17,7 +16,7 @@ RobotDog = 'robot_dog'
 # input bounds
 input_bound = {
     DoubleIntegrator: [[-1, -1], [1, 1]],
-    Pendulum: [[-pi / 4, -4], [-4, pi / 4]],
+    Pendulum: [[-pi / 4, -4], [pi / 4, 4]],
     Unicycle: [[-1, -1, -1], [1, 1, 1]],
     LaneKeep: [[-2, -pi / 3, -1, -1], [2, pi / 3, 1, 1]],
     Quadrotor: [[-1, -pi / 6, -1, -1], [1, pi / 6, 1, 1]],
